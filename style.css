@@ -1,0 +1,374 @@
+body {
+    min-height: 80vh;
+    font-family: "Garamond";
+    font-size: 24pt;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    background-color: navy;
+    background-image: url("bg.jpg");
+    background-repeat: repeat;
+    /*background-size: 10000px 5000px;
+    background-size: 3200px 1600px;*/
+    background-size: 1024px 1024px;
+    background-attachment: fixed;
+    background-position: 0px 0px;
+    animation: bganimvert 60s linear infinite,
+        bganimhori 7s alternate cubic-bezier(0.364212423249, 0, 0.635787576751, 1) infinite;
+}
+
+@keyframes bganimvert {
+    0% {
+        background-position-y: 0;
+    }
+
+    100% {
+        background-position-y: -1024px;
+    }
+}
+
+@keyframes bganimhori {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 64px;
+    }
+}
+
+table {
+    border-collapse: collapse
+}
+
+td {
+    text-align: center;
+    margin: 0;
+    padding: 0.1em;
+}
+
+input {
+    font-family: "Garamond";
+    background: black;
+    color: white;
+    width: 100%;
+}
+
+.name input {
+    font-size: 24pt;
+}
+
+.start input {
+    font-size: 24pt;
+}
+
+.mainopt {
+    font-size: 18pt;
+}
+
+.majopt td {
+    font-size: 18pt;
+}
+
+.majopt input {
+    font-size: 18pt;
+}
+
+.addopt td, .addopt input {
+    font-size: 12pt;
+}
+
+.minopt {
+    display: none;
+    visibility: hidden;
+}
+
+.minopt td {
+    font-size: 12pt;
+    text-align: left;
+}
+
+.minopt input {
+    font-size: 12pt;
+    text-align: center;
+}
+
+.minopt select {
+    font-size: 12pt;
+    width: 100%;
+}
+
+.minopt p {
+    margin: 0;
+    padding: 0;
+}
+
+.help td {
+    font-size: 16pt;
+    text-align: justify;
+}
+
+.help u {
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+
+.help p {
+    margin: 0.5em;
+    margin-left: 1.5em;
+    text-indent: -1em;
+}
+
+.help sup {
+    vertical-align: top;
+    font-size: 10.67pt;
+}
+
+.pname {
+    font-size: 24pt;
+    height: 3.6em;
+}
+
+.pfact {
+    font-size: 24pt;
+    height: 3.6em;
+}
+
+.pfact p {
+    font-size: 18pt;
+    margin: 0;
+    text-align: center;
+}
+
+.pfact img {
+    height: 2.4em;
+    filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+}
+
+.pspeak {
+    font-size: 24pt;
+    height: 3.6em;
+}
+
+.pspeak img {
+    height: 3em;
+    padding: 0;
+    margin: 0;
+}
+
+.results {
+    padding-top: 2.5em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    overflow: auto;
+}
+
+.results table {
+    padding: 1em;
+}
+
+.pslice p {
+    font-size: 18pt;
+    margin: 0;
+    text-align: center;
+}
+
+.pslice canvas {
+    width: 8em;
+    height: 8em;
+}
+
+.slices {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.slices canvas {
+    width: 12em;
+    height: 12em;
+    margin: 0;
+}
+
+.slicebox {
+    margin-bottom: 1.2em;
+}
+
+.slicebox p {
+    margin: 0;
+    text-align: center;
+    height: 1.2em;
+}
+
+.slicebox input {
+    width: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 18pt;
+}
+
+.factions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.facticon {
+    margin: 0.5em;
+    text-align: center;
+    height: 6.67em;
+}
+
+.facticon p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.factions img {
+    height: 4em;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+}
+
+.factions input {
+    width: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 18pt;
+}
+
+.speaker {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.speaker img {
+    height: 4em;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.speaker input {
+    width: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 18pt;
+}
+
+.spkicon {
+    margin: 0.5em;
+    text-align: center;
+    height: 5.5em;
+}
+
+.spkicon p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.soverlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    top: 2.5em;
+    top: calc(2.5em + 2px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00008888;
+    z-index: 20;
+    cursor: pointer;
+    text-align: center;
+}
+
+.soverlay canvas {
+    width: 90vmin;
+    height: 90vmin;
+    width: calc(100vmin - 2.5em - 2px);
+    height: calc(100vmin - 2.5em - 2px);
+}
+
+.foverlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    top: 2.5em;
+    top: calc(2.5em + 2px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00008888;
+    z-index: 20;
+    cursor: pointer;
+    text-align: center;
+}
+
+.foverlay img {
+    width: 90vmin;
+    height: 64.464944649446494464944649446494vmin;
+    width: min(calc(2439 / 1747 * calc(100vh - 3.5em - 2px)), calc(100vw - 1em));
+    height: min(calc(100vh - 3.5em - 2px), calc(1747 / 2439 * calc(100vw - 1em)));
+    max-width: 2439px;
+    max-height: 1747px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.header {
+    width: 100%;
+    height: 1.5em;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    border-bottom: 2px solid white;
+    background: inherit;
+    padding: 0.5em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.header span:not(:first-child) {
+    flex: 1;
+    text-align: center;
+    text-decoration: underline;
+    user-select: none;
+}
+
+.currentplayer {
+    flex: 3;
+}
+
+.currentplayer p {
+    margin: 0 auto 0 auto;
+    padding: 0;
+    line-height: 1;
+    text-align: left;
+}
+
+.tabletop {
+    font-family: "Consolas", "Courier New", "Courier", "monospace";
+    font-size: 16pt;
+    text-align: center;
+    max-width: 80vw;
+    margin: 1em 0;
+}
+
+@font-face {
+    font-family: "slider";
+    src: url(slider.otf);
+}
