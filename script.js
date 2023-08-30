@@ -303,7 +303,7 @@ function randslices() {
 async function start() {
     // Set random number seed for consistent results
     // TODO: Add a field to the page to make this optional/configurable
-    Math.random = Alea(1652326);
+    Math.random = Alea(165888);
 
     players = [];
     for (var i = 1; i <= 8; i++) {
